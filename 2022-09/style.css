@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+#test {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#test:checked + .cube {
+  transform: rotateY(25deg) rotateX(25deg);
+}
+
+.cube {
+  transition: transform 1s;
+  position: relative;
+  width: 25vmin;
+  height: 25vmin;
+  transform-style: preserve-3d;
+}
+
+.cube-side {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border: 1px solid black;
+  width: 25vmin;
+  height: 25vmin;
+}
+
+.cube-side-red {
+  background-color: red;
+}
+
+.cube-side-yellow {
+  background-color: yellow;
+  transform-origin: center left;
+  transform: rotateY(90deg);
+}
+
+.cube-side-blue {
+  background-color: blue;
+}
+
+.cube-side-white {
+  background-color: white;
+}
+
+.cube-side-hotpink {
+  background-color: hotpink;
+}
+
+.cube-side-green {
+  background-color: green;
+}
+
+.cube-side-tile {
+  border: 1vmin solid black;
+}
