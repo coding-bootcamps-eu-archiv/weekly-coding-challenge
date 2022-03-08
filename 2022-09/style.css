@@ -1,73 +1,107 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1000px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.slider {
+    position: fixed;
+}
+
+#rotate-x {
+    top: 0;
+    left: 1vmin;
+}
+
+#rotate-y {
+    top: 5vmin;
+    left: 1vmin;
 }
 
 #test {
-  position: fixed;
-  top: 0;
-  left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 #test:checked + .cube {
-  transform: rotateY(25deg) rotateX(25deg);
+    transform: rotateX(-25deg) rotateY(25deg);
+    animation: rotateScene 30s linear infinite;
 }
 
 .cube {
-  transition: transform 1s;
-  position: relative;
-  width: 25vmin;
-  height: 25vmin;
-  transform-style: preserve-3d;
+    transition: transform 1s;
+    position: relative;
+    width: 25vmin;
+    height: 25vmin;
+    transform-style: preserve-3d;
 }
 
 .cube-side {
-  position: absolute;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  border: 1px solid black;
-  width: 25vmin;
-  height: 25vmin;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1px solid black;
+    width: 25vmin;
+    height: 25vmin;
 }
 
 .cube-side-red {
-  background-color: red;
+    background-color: red;
 }
 
 .cube-side-yellow {
-  background-color: yellow;
-  transform-origin: center left;
-  transform: rotateY(90deg);
+    background-color: yellow;
+    transform-origin: center left;
+    transform: rotateY(90deg);
 }
 
 .cube-side-blue {
-  background-color: blue;
+    background-color: blue;
+    transform: rotateY(-90deg);
+    transform-origin: center right;
 }
 
 .cube-side-white {
-  background-color: white;
+    background-color: white;
+    transform: translateZ(-25vmin);
 }
 
 .cube-side-hotpink {
-  background-color: hotpink;
+    background-color: hotpink;
+    transform-origin: bottom center;
+    transform: rotateX(90deg);
 }
 
 .cube-side-green {
-  background-color: green;
+    background-color: green;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
 }
 
 .cube-side-tile {
-  border: 1vmin solid black;
+    border: 1vmin solid black;
+}
+
+@keyframes rotateScene {
+    0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    50% {
+        transform: rotateX(180deg) rotateY(360deg) rotateZ(360deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(720deg) rotateZ(720deg);
+    }
 }
