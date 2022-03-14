@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+.playground {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.card {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-visible {
+  background-color: salmon;
+}
+
+.card-matched {
+  background-color: rgba(250, 128, 114, 0.5);
+}
