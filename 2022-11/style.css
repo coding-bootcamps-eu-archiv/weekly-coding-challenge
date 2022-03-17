@@ -21,12 +21,29 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: transparent;
+  font-size: 0;
+  background-size: 0 0;
+  border: 5px solid black;
+}
+
+.card::before {
+  content: attr(id);
+  color: black;
+  font-size: initial;
 }
 
 .card-visible {
   background-color: salmon;
+  background-size: cover;
 }
 
 .card-matched {
   background-color: rgba(250, 128, 114, 0.5);
+  background-size: cover;
+}
+
+.card-matched::before,
+.card-visible::before {
+  color: transparent;
 }
