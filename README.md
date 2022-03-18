@@ -30,10 +30,11 @@ The Thursday evening Live-Session will be used to
 
 ## Current Challenge
 
-- [2022-10 Tic Tac Toe with HTML, CSS and JS](2022-10.md)
+- [2022-11 Memory Game with HTML, CSS and JS](2022-11.md)
 
 ## Past Challenges
 
 - [2022-09 3d CSS Cube](2022-09.md)
-- [2022-08 Minimal Tetris Clong with P5.js](2022-08.md)
+- [2022-08 Minimal Tetris Clone with P5.js](2022-08.md)
 - [2022-07 Tetris](2022-07.md)
+- [2022-10 Tic Tac Toe with HTML, CSS and JS](2022-10.md)
